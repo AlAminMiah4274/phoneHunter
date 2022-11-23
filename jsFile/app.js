@@ -13,6 +13,10 @@ const displayPhones = phones => {
     const showAll = document.getElementById('show-all');
     if (phones.length > 10) {
         phones = phones.slice(0, 10);
+        showAll.classList.remove('d-none');
+    }
+    else {
+        showAll.classList.add('d-none');
     }
 
     // display no phone found
