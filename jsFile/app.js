@@ -93,12 +93,14 @@ const loadPhoneDetails = async id => {
 }
 
 const displayPhoneDetails = phone => {
-    console.log(phone);
+    // console.log(phone);
     const phoneTitle = document.getElementById('phoneDetailModalLabel');
     phoneTitle.innerText = phone.name;
     const phoneDetail = document.getElementById('phone-detail');
     phoneDetail.innerHTML = `
         <p>Release Date: ${phone.releaseDate ? phone.releaseDate : 'No Release Date Found'}</p>
+        <p>Storage: ${phone.mainFeatures ? phone.mainFeatures.storage : 'No Information Found'}</p>
+        <p>Display Size: ${phone.mainFeatures ? phone.mainFeatures.displaySize : 'No Information Found'}</p>
     `;
 }
 
